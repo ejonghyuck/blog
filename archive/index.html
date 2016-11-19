@@ -3,10 +3,12 @@ layout: page
 title: Archive
 ---
 <div class="archive">
-  <div class="archive-list">
   {% if site.posts.size == 0 %}
+  <div class="archive-list">
     <h2>No post found</h2>
+  </div>
   {% else %}
+  <div class="archive-list">
   <h3>Posts</h2>
   {% for post in site.posts %}
     {% unless post.link %}
@@ -22,6 +24,8 @@ title: Archive
     </div>
     {% endunless %}
   {% endfor %}
+  </div>
+  <div class="archive-list">
   <h3>Scraps</h3>
   {% for post in site.posts %}
     {% if post.link %}
@@ -37,6 +41,6 @@ title: Archive
     </div>
     {% endif %}
   {% endfor %}
-  {% endif %}
   </div>
+  {% endif %}
 </div>
