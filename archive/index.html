@@ -13,7 +13,7 @@ title: Archive
   {% for post in site.posts %}
     {% unless post.link %}
     <div class="archive-list-post">
-      <a href="{{ post.link }}">
+      <a href="{{ post.url | prepend: site.baseurl }}">
         <span class="archive-list-post-title">
           {{ post.title }}
         </span>
@@ -30,7 +30,7 @@ title: Archive
   {% for post in site.posts %}
     {% if post.link %}
     <div class="archive-list-post">
-      <a href="{{ post.url | prepend: site.baseurl }}">
+      <a href="{{ post.link }}">
         <span class="archive-list-post-title">
           {{ post.title }}
         </span>
