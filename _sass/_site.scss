@@ -32,6 +32,9 @@ body {
   }
 }
 
+.active {
+    color: $highlight_color_darken;
+}
 
 /*--------------
   Header

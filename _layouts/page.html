@@ -3,7 +3,14 @@ layout: default
 ---
 <header>
   <h1 class="header-small">
-    <a href="{{site.url}}{{site.baseurl}}">{{ site.name }}</a>
+    <a href="{{site.url}}{{site.baseurl}}"><span class="active">{{ site.name }}</span></a>
+    {% for nav in site.nav %}
+    {% if nav.url contains 'http://' or nav.url contains 'https://' %}
+    <a href="{{ nav.url }}">{{ nav.name }}</a>
+    {% else %}
+    <a href="{{ nav.url | prepend: site.baseurl }}">{{ nav.name }}</a>
+    {% endif %}
+    {% endfor %}
   </h1>
 </header>
 <div class="page">
