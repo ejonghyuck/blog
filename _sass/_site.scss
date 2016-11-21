@@ -79,20 +79,20 @@ body {
 }
 
 .header-small {
-	text-align: left;
-	margin-bottom: .75rem;
-	font-size: .75rem;
-	font-weight: 600;
-	text-transform: uppercase;
+  text-align: left;
+  margin-bottom: .75rem;
+  font-size: .75rem;
+  font-weight: 600;
+  text-transform: uppercase;
 
-	a {
-		color: $base-color;
+  a {
+    color: $base-color;
 
-		&:hover,
-		&:focus {
-			text-decoration: none;
-		}
-	}
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
 }
 
 /*--------------
@@ -129,9 +129,9 @@ body {
       margin: 4px;
       margin-left: 0px;
       color: #fff;
-      background-color: $base-lighten-color;
+      background-color: $highlight_color;
       text-decoration: none;
-			border-radius: 3px;
+      border-radius: 3px;
     }
     li {
       font-size: .75rem;
@@ -141,7 +141,7 @@ body {
     }
     span {
       float: left;
-			padding: .5px 5px;
+      padding: .5px 5px;
     }
   }
   &-share {
@@ -184,7 +184,7 @@ body {
     }
 
     &-desc {
-			color: lighten($base-color, 20);
+      color: lighten($base-color, 20);
       margin-bottom: .25rem;
       font-size :1rem;
     }
@@ -240,41 +240,41 @@ body {
       display: inline-block;
       margin: 1px 4px;
       color: #fff;
-      background-color: lighten($base-color,50);
-			border-radius: 3px;
+      background-color: $highlight_color;
+      border-radius: 3px;
       span {
         float: left;
         padding: .5px 5px;
       }
       .count {
-        background-color: lighten($base-color,40);
-				border-radius: 0 3px 3px 0;
+        background-color: $highlight_color_darken;
+        border-radius: 0 3px 3px 0;
       }
       &:hover {
-        background-color: lighten($base-color,40);
+        background-color: $highlight_color_darken;
       }
     }
   }
 
   &-title {
-		font-size: 1.4rem;
-		font-weight: 600;
-		text-transform: lowercase;
-		padding-top: 1rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-transform: lowercase;
+    padding-top: 1rem;
   }
 
   &-post {
-		padding-left: .75rem;
-		a {
-			color: $base-color;
+    padding-left: .75rem;
+    a {
+      color: $base-color;
 
-			&:hover {
-				color: $base-color;
-				text-decoration: none;
-				background-color: $background-over-color;
-		    border-color: transparent;
+      &:hover {
+        color: $base-color;
+        text-decoration: none;
+        background-color: $background-over-color;
+        border-color: transparent;
       }
-		}
+    }
   }
 }
 
@@ -289,10 +289,10 @@ body {
         color: $base-color;
 
         &:hover {
-  				color: $base-color;
-  				text-decoration: none;
-  				background-color: $background-over-color;
-  		    border-color: transparent;
+          color: $base-color;
+          text-decoration: none;
+          background-color: $background-over-color;
+          border-color: transparent;
         }
 
       }
