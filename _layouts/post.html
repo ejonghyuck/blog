@@ -2,13 +2,18 @@
 layout: default
 ---
 <header>
+  <hr class="under">
   <h1 class="header-small">
     <a href="{{site.url}}{{site.baseurl}}"><span class="active">{{ site.name }}</span></a>
     {% for nav in site.nav %}
+    {% assign class = nil %}
+    {% if page.url contains nav.url %}
+        {% assign class = 'nav-active' %}
+    {% endif %}
     {% if nav.url contains 'http://' or nav.url contains 'https://' %}
-    <a href="{{ nav.url }}">{{ nav.name }}</a>
+    <a href="{{ nav.url }}"><span class="{{ class }}">{{ nav.name }}</span></a>
     {% else %}
-    <a href="{{ nav.url | prepend: site.baseurl }}">{{ nav.name }}</a>
+    <a href="{{ nav.url | prepend: site.baseurl }}"><span class="{{ class }}">{{ nav.name }}</span></a>
     {% endif %}
     {% endfor %}
   </h1>
