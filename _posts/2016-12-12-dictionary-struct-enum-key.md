@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "유니티 C#에서 enum과 struct를 key로 사용하는 Dictionary의 최적화"
-description: "유니티 C#의 enum과 struct를 key로 사용하는 Dictionary에서 발생할 수 있는 가비지들과, 최적화의 방법으로 IEqualityComparer를 통한 방법에 대해 알아본다."
+title: "유니티 C#에서 struct와 enum을 key로 사용하는 Dictionary의 최적화"
+description: "struct와 enum을 key로 사용하는 Dictionary에서 발생할 수 있는 가비지들과, 최적화의 방법으로 IEqualityComparer를 통한 방법에 대해 알아본다."
 date: 2016-12-12
 tags: [unity, c#]
 comments: true
