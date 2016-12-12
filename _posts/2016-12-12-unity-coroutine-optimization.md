@@ -110,3 +110,7 @@ yield return YieldInstructionCache.WaitForSeconds(seconds);
 ```
 
 Seconds 값마다 WaitForSeconds 인스턴스를 Dictionary에 캐싱하는 방법이기 때문에 가비지가 아예 발생하지 않는 것은 아니지만, `yield return new WaitForSeconds(seconds)`를 직접 하는 것보단 훨씬 적은 가비지가 생성될 것이며 훨씬 빠를 것이다.
+
+## Refs
+* [UniRx - YieldInstructionCache.cs](https://github.com/neuecc/UniRx/blob/master/Assets/Plugins/UniRx/Scripts/UnityEngineBridge/YieldInstructionCache.cs)
+* [Unity Forum - C# Coroutine WaitForSeconds Garbage Collection tip](https://forum.unity3d.com/threads/c-coroutine-waitforseconds-garbage-collection-tip.224878/)
