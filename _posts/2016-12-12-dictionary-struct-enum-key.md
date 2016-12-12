@@ -23,7 +23,7 @@ struct를 선언할 때 `Equals()`, `GetHashCode()` 메서드들을 구현하지
 enum의 `Equals()` 메서드 또한 struct와 마찬가지로. object로 박싱하여 비교하기 때문에 가비지가 발생한다.
 
 ## 가비지가 생기지 않게 하려면?
-가장 편한 방법은 `System.Collections.Generic` 네임스페이스 내부에 존재하는 IEqualityComparer<T> 인터페이스를 상속받는 클래스를 선언해서 비교하게 하는 방법이다.
+가장 편한 방법은 `System.Collections.Generic` 네임스페이스 내부에 존재하는 `IEqualityComparer<T>` 인터페이스를 상속받는 클래스를 선언해서 비교하게 하는 방법이다.
 Dictionary 인스턴스를 새로 생성할 때 생성자에 인스턴스를 넣어주면 된다.
 
 ```csharp
