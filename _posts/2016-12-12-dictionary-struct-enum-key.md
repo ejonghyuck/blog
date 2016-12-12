@@ -18,9 +18,9 @@ share: true
 ## 왜 가비지가 생기는가?
 struct를 선언할 때 `Equals()`, `GetHashCode()` 메서드들을 구현하지 않았다면, Dictionary의 Contains 메서드를 호출할 경우 내부적으로 object로 박싱하여 `object.Equals`를 통해 비교 구문을 실행하게 된다.
 이는 some_dictionary[key] 처럼 접근할 때에도 key의 비교 구문을 실행하기 때문에 내부적으로 박싱이 이뤄지게 된다.
-당연히 박싱이 이뤄지면 가비지가 생길 수 밖에 없으며, 안타깝게도 struct에는 Vector3같은 유니티의 built-in struct들도 박싱이 이뤄진다.
 
-enum 역시 `Equals()` 메서드 역시 마찬가지로 object로 박싱하여 비교하기 때문에 가비지가 발생한다.
+당연히 박싱이 이뤄지면 가비지가 생길 수 밖에 없으며, 안타깝게도 struct에는 Vector3같은 유니티의 built-in struct들도 박싱이 이뤄진다.
+enum의 `Equals()` 메서드 또한 struct와 마찬가지로. object로 박싱하여 비교하기 때문에 가비지가 발생한다.
 
 ## 가비지가 생기지 않게 하려면?
 가장 편한 방법은 `System.Collections.Generic` 네임스페이스 내부에 존재하는 IEqualityComparer<T> 인터페이스를 상속받는 클래스를 선언해서 비교하게 하는 방법이다.
