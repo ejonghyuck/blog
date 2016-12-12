@@ -21,14 +21,14 @@ C# 6.0의 async, await와 비슷한 느낌으로 루틴을 단계적으로 실�
 * StartCoroutine
 * YieldInstruction
 
-## StartCoroutine?
+## StartCoroutine도 가비지를 생성한다고?
 StartCoroutine 메서드를 호출하는 순간 유니티는 해당 코루틴을 관리하기 위해 엔진 내부에서 인스턴스가 생성되며, 이는 가비지 컬렉터의 먹이가 된다.
 때문에 StartCoroutine을 최소한으로 사용해야 그나마 적은 가비지를 생성하게 될 것이다.
 
 StartCoroutine 자체는 유니티 엔진 내부의 코드이기 때문에 이를 최적화 하는 것은 불가능하며, 그나마 최적화를 한다면 직접 코루틴 기능을 제작하는 방법 외엔 없다.
 비슷한 기능을 제공하는 에셋으로는 [More Effective Coroutine](https://www.assetstore.unity3d.com/en/#!/content/68480) 라는 것이 존재한다.
 
-## YieldInstruction
+## YieldInstruction은 뭐지?
 YieldInstruction은 코루틴 내부에서 yield 구문에 사용되는 값이다.
 크게 3가지를 사용한다.
 
