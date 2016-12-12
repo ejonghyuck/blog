@@ -15,7 +15,7 @@ share: true
 * enum-key를 사용하는 Dictionary
 * struct-key를 사용하는 Dictionary
 
-## 왜 가비지가 발생하는가?
+## 왜 가비지가 생기는가?
 struct를 선언할 때 `Equals()`, `GetHashCode()` 메서드들을 구현하지 않았다면, Dictionary의 Contains 메서드를 호출할 경우 내부적으로 object로 박싱하여 `object.Equals`를 통해 비교 구문을 실행하게 된다.
 이는 some_dictionary[key] 처럼 접근할 때에도 key의 비교 구문을 실행하기 때문에 내부적으로 박싱이 이뤄지게 된다.
 안타깝게도 struct에는 Vector3같은 유니티의 built-in struct들도 박싱이 이뤄진다.
