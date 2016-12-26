@@ -16,7 +16,7 @@ Horizontal을 시작하고 끝내는 것, 그래 좋다.
 그런데 왜 Begin을 하고 End로 꼭 끝을 내줘야 할까?
 가끔 Begin을 하고 End를 하지 않아서 콘솔창에 경고가 가득 뜨는 경험을 한 번 해봤다면, 정말 불편하기 짝이 없는 구조라 느낄 것이다.
 
-그래서 Unity5에는 GUI 클래스에 Scope라는 기능이 추가되었다.
+그러나 놀랍게도 (*유니티에서 홍보를 안했기 때문에 거의 대부분은 모르지만*) Unity5에는 GUI 클래스에 Scope라는 기능이 추가되었다.
 
 ## 사용법
 ![](https://docs.unity3d.com/StaticFiles/ScriptRefImages/BeginEndHorizontalExample.png)
